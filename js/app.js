@@ -1,10 +1,9 @@
 const countries = document.getElementById("countries");
-
 document.addEventListener("DOMContentLoaded", (e) => {
   fetchData();
 });
 
-const fetchData = async () => {
+const fetchData = async (e) => {
   try {
     const response = await fetch("https://restcountries.eu/rest/v2/all");
     const data = await response.json();
