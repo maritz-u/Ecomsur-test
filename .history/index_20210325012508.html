@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecomsur Test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container navbar-content">
+        <h1>Países del mundo</h1>
+      </div>
+    </nav>
+    <header class="container filter-content my-2">
+      <form id="formulario">
+        <input type="text" placeholder="Ingresa País" id="inputTexto" />
+      </form>
+      <div>
+        <select id="filtroSelect">
+          <option value="">Filtrar por Región</option>
+          <option value="">Todos</option>
+          <option value="Africa">África</option>
+          <option value="Americas">América</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europa</option>
+          <option value="Oceania">Oceanía</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="container grid" id="banderas">
+      <article class="card">
+        <div class="card-content">
+          <h3>Nombre país</h3>
+          <p>
+            <b>Capital </b>
+            Berlin
+          </p>
+          <p>
+            <b>Region: </b>
+            Europe
+          </p>
+          <p>
+            <!-- <b>Países Límitrofes </b>
+            ksjdks
+          </p>
+          <p>
+            <b>Lengua</b>
+            kdjksd
+          </p>
+          <p>
+            <b>nombreysimbmoneda</b>
+            kdjksd
+          </p> -->
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>
