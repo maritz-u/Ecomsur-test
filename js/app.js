@@ -16,11 +16,22 @@ const fetchData = async (e) => {
   }
 };
 
+const parseCurrencies = (currencies) => {
+  const currenciesInfo = currencies.map((currency) => {
+    return `${currency.name} (${currency.symbol})`;
+  });
+  return currenciesInfo.join("");
+};
+const parseLanguages = (languages) => {
+  const languagesInfo = languages.map((language) => {
+    return `${language.name}`;
+  });
+  return languagesInfo.join("");
+};
 const flags = (data) => {
   let elements = "";
   data.forEach((items) => {
     elements += ` 
-    <div class="card-container">
     <div class="card">
     <div class="front-card">
         <img
@@ -28,6 +39,7 @@ const flags = (data) => {
           alt=""
           class="img-fluid"
         />
+        <div class="px-1">
           <h3>${items.name}</h3>
           <p>
             <b>Capital </b>
@@ -37,24 +49,23 @@ const flags = (data) => {
             <b>Región </b>
             ${items.region}
           </p>
-          <p>
           </div>
-          <div class="back-card">
-          <b>Países Límitrofes </b>
+          </div>
+          <div class="back-card px-1">
+          <p>
+          <b>Países Limítrofes </b>
             ${items.borders}
           </p>
           <p>
             <b>Lengua</b>
-            ${items.languages}
+            ${parseLanguages(items.languages)}
           </p>
           <p>
-            <b>nombreysimbmoneda</b>
-            ${items.currencies}
-          </p> 
+            <b>Moneda</b>
+            ${parseCurrencies(items.currencies)}
           </p> 
           </div>
-        </div>
-      </div>`;
+        </div>`;
   });
   countries.innerHTML = elements;
 };
